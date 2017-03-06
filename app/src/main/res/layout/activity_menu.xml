@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="br.com.silver.easycheck.MenuActivity">
+
+        <!-- Scanner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3a9bef"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/img_scanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qrcode_48dp"
+                android:onClick="initScan"
+                style="@style/ImageMenu"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_scanner"
+                style="@style/TextMenu"/>
+        </LinearLayout>
+
+        <!-- History -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ae5fdf"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_people_48dp"
+                    android:onClick="history"
+                    style="@style/ImageMenu"/>
+                <TextView
+                    android:id="@+id/count_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1"
+                    android:textColor="@color/white"
+                    android:textSize="40dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_history"
+                style="@style/TextMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Preferences -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#3cbc9a"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginRight="5dp">
+                <ImageView
+                    android:id="@+id/img_pref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings_48dp"
+                    android:onClick="preferences"
+                    style="@style/ImageMenu"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_preferences"
+                    style="@style/TextMenu"/>
+            </LinearLayout>
+
+            <!-- Exit -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#e04737"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                <ImageView
+                    android:id="@+id/img_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_power_48dp"
+                    style="@style/ImageMenu"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_exit"
+                    style="@style/TextMenu"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="@string/title_server"
+        android:key="@string/pref_server"
+        android:summary="@string/summary_server"/>
+    <EditTextPreference
+        android:title="@string/title_server_address"
+        android:key="@string/pref_server_address"
+        android:inputType="text"
+        android:singleLine="true"/>
+    <SwitchPreference
+        android:title="@string/title_scanner"
+        android:key="@string/pref_scanner"
+        android:summary="@string/summary_scanner"/>
+
+</PreferenceScreen>
